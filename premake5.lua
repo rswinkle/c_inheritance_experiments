@@ -10,8 +10,12 @@ solution "c_oop"
 		language "C"
 		files
 		{
-			  "main.c",
-			  "shape.h"
+			"main.c",
+			"shape.h",
+			"square.c",
+			"square.h",
+			"circle.c",
+			"circle.h"
 		}
 		--excludes {  }
 		--libdirs { }
