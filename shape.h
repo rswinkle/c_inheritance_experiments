@@ -1,7 +1,10 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+#include "cinheritance.h"
+
 #include <stdio.h>
+
 
 typedef struct shape_vtable {
 	float (*area)(void*);
@@ -18,9 +21,8 @@ float prefix##perimeter(void* shape); \
 void prefix##print(void* shape, FILE* f)
 
 
-// This really isn't shape specific, should be in something like inheritance.h
-
-#define CALL(ptr, parent, method, ...) ((parent##_vtable*)(ptr))->method(ptr, __VA_ARGS__)
+// Better name?
+#define SHAPE_METHOD(ptr, method, ...) CALL_METHOD(ptr, shape, method, __VA_ARGS__)
 
 
 

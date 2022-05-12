@@ -38,7 +38,7 @@ int main()
 
 		//((shape_vtable*)(shapes[i]))->print(shapes[i], stdout);
 		printf("shape %d:\n", i);
-		CALL(shapes[i], shape, print, stdout);
+		SHAPE_METHOD(shapes[i], print, stdout);
 		puts("");;
 	}
 

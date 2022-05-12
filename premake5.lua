@@ -15,7 +15,9 @@ solution "c_oop"
 			"square.c",
 			"square.h",
 			"circle.c",
-			"circle.h"
+			"circle.h",
+			"cinheritance.h"
+
 		}
 		--excludes {  }
 		--libdirs { }
