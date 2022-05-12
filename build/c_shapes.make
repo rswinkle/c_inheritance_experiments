@@ -65,8 +65,8 @@ all: prebuild prelink $(TARGET)
 endif
 
 OBJECTS := \
+	$(OBJDIR)/c_shapes.o \
 	$(OBJDIR)/circle.o \
-	$(OBJDIR)/main.o \
 	$(OBJDIR)/square.o \
 
 RESOURCES := \
@@ -126,10 +126,10 @@ else
 $(OBJECTS): | $(OBJDIR)
 endif
 
-$(OBJDIR)/circle.o: ../circle.c
+$(OBJDIR)/c_shapes.o: ../c_shapes.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(ALL_CFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
-$(OBJDIR)/main.o: ../main.c
+$(OBJDIR)/circle.o: ../circle.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(ALL_CFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/square.o: ../square.c

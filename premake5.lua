@@ -10,7 +10,7 @@ solution "c_oop"
 		language "C"
 		files
 		{
-			"main.c",
+			"c_shapes.c",
 			"shape.h",
 			"square.c",
 			"square.h",
